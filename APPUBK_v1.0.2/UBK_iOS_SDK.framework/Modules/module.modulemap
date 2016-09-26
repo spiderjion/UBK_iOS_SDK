@@ -1,0 +1,6 @@
+framework module UBK_iOS_SDK {
+  umbrella header "UBK_iOS_SDK.h"
+
+  export *
+  module * { export * }
+}
