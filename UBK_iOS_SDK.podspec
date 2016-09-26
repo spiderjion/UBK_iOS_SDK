@@ -40,7 +40,22 @@ Pod::Spec.new do |s|
   #
 
   # s.license      = "MIT (example)"
-  # s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
+  s.license      = {
+      :type => 'Commercial',
+      :text => <<-LICENSE
+                Copyright (C) 2016 feelwx.
+                Permission is hereby granted to use this framework as is, modification are not allowed.
+                All rights reserved.
+
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+        THE SOFTWARE.
+      LICENSE
+    }
 
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -91,9 +106,9 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "Classes", "Classes/**/*.{h,m}"
+  s.source_files  = "framework/UBK_iOS_SDK.framework/Headers/*.h"
   # s.exclude_files = "Classes/Exclude"
-  s.source_files = "framework/*.*"
+  # s.ios.vendored_frameworks = "framework/UBK_iOS_SDK.framework"
 
   # s.public_header_files = "Classes/**/*.h"
 
@@ -109,7 +124,7 @@ Pod::Spec.new do |s|
   # s.resource  = "icon.png"
   # s.resources = "Resources/*.png"
 
-  # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
+  s.preserve_paths = "framework/UBK_iOS_SDK.framework/*"
 
 
   # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
