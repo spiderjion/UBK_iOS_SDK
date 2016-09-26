@@ -25,6 +25,7 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
+                  非零无限官方UBK APPSDK
                    DESC
 
   s.homepage     = "http://www.feelwx.com"
@@ -52,8 +53,8 @@ Pod::Spec.new do |s|
   #  profile URL.
   #
 
-  s.author             = { "Sarkizz" => "spiderjion@126.com" }
-  # Or just: s.author    = "Sarkizz"
+  # s.author             = { "Sarkizz" => "spiderjion@126.com" }
+  s.author    = "Sarkizz"
   # s.authors            = { "Sarkizz" => "spiderjion@126.com" }
   # s.social_media_url   = "http://twitter.com/Sarkizz"
 
@@ -79,7 +80,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "http://EXAMPLE/UBK_iOS_SDK.git", :tag => "1.0.2" }
+  s.source       = { :git => "https://github.com/spiderjion/UBK_iOS_SDK.git", :tag => s.version.to_s}
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -90,8 +91,9 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  # s.source_files  = "Classes", "Classes/**/*.{h,m}"
+  s.source_files  = "Classes", "Classes/**/*.{h,m}"
   # s.exclude_files = "Classes/Exclude"
+  s.source_files = "framework/*.*"
 
   # s.public_header_files = "Classes/**/*.h"
 
@@ -116,7 +118,7 @@ Pod::Spec.new do |s|
   #  the lib prefix of their name.
   #
 
-  s.framework  = "UBK_iOS_SDK"
+  # s.framework  = "SomeFramework"
   # s.frameworks = "SomeFramework", "AnotherFramework"
 
   # s.library   = "iconv"
